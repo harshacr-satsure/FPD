@@ -17,18 +17,7 @@
       "source": "boundary_view",
       "source-layer": "boundary_view",
       "paint": {
-        "fill-color": "#AAAAAA",
-        "fill-outline-color": "#000000"
-      }
-    },
-    {
-      "id": "boundary-view-outline",
-      "type": "line",
-      "source": "boundary_view",
-      "source-layer": "boundary_view",
-      "paint": {
-        "line-color": "#000000",
-        "line-width": 1
+        "fill-color": "#FF0000"
       }
     }
   ]
