@@ -1,37 +1,35 @@
 {
-  "version": "1.0.0",
-  "NamedLayer": {
-    "Name": "default_polygon",
-    "UserStyle": {
-      "Title": "Default Polygon",
-      "Abstract": "A sample style that draws a polygon",
-      "FeatureTypeStyle": {
-        "Rule": {
-          "Name": "rule1",
-          "Title": "Gray Polygon with Black Outline",
-          "Abstract": "A polygon with a gray fill and a 1 pixel black outline",
-          "PolygonSymbolizer": {
-            "Fill": {
-              "CssParameter": {
-                "name": "fill",
-                "value": "#AAAAAA"
-              }
-            },
-            "Stroke": {
-              "CssParameter": [
-                {
-                  "name": "stroke",
-                  "value": "#000000"
-                },
-                {
-                  "name": "stroke-width",
-                  "value": "1"
-                }
-              ]
-            }
-          }
-        }
+  "version": 8,
+  "sources": {
+    "boundary_view": {
+      "type": "vector",
+      "tiles": [
+        "https://gris.cloud.syngenta.org/geoserver/gwc/service/tms/1.0.0/gris:boundary_view@EPSG%3A900913@pbf/{z}/{x}/{-y}.pbf"
+      ],
+      "minzoom": 0,
+      "maxzoom": 22
+    }
+  },
+  "layers": [
+    {
+      "id": "boundary-view-fill",
+      "type": "fill",
+      "source": "boundary_view",
+      "source-layer": "boundary_view",
+      "paint": {
+        "fill-color": "#AAAAAA",
+        "fill-outline-color": "#000000"
+      }
+    },
+    {
+      "id": "boundary-view-outline",
+      "type": "line",
+      "source": "boundary_view",
+      "source-layer": "boundary_view",
+      "paint": {
+        "line-color": "#000000",
+        "line-width": 1
       }
     }
-  }
+  ]
 }
