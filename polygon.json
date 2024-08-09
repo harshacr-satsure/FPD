@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "NamedLayer": {
+    "Name": "default_polygon",
+    "UserStyle": {
+      "Title": "Default Polygon",
+      "Abstract": "A sample style that draws a polygon",
+      "FeatureTypeStyle": {
+        "Rule": {
+          "Name": "rule1",
+          "Title": "Gray Polygon with Black Outline",
+          "Abstract": "A polygon with a gray fill and a 1 pixel black outline",
+          "PolygonSymbolizer": {
+            "Fill": {
+              "CssParameter": {
+                "name": "fill",
+                "value": "#AAAAAA"
+              }
+            },
+            "Stroke": {
+              "CssParameter": [
+                {
+                  "name": "stroke",
+                  "value": "#000000"
+                },
+                {
+                  "name": "stroke-width",
+                  "value": "1"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
